@@ -1,0 +1,19 @@
+@import './_variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+}
+html{
+    font-family: 'Nunito Sans', sans-serif;
+    background: $dark-1;
+    background-image: linear-gradient(to bottom, #0c0c0c, #101010, #131313, #161616, #191919, #1b1b1b, #1e1e1e, #202020, #232323, #262626, #292929, #2c2c2c);
+    color: $light-2;
+}
+
+h1, h2,h3,h4 {
+    color: $light-1;
+}
