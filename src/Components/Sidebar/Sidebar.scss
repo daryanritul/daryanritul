@@ -1,8 +1,10 @@
 @import '../../scss/variables.scss';
 .sidebar{
-    width: 10%;
+    width: 300px;
+    height: 100vh;
+    position: sticky;
+    top: 0px;
     display: flex;
-    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -15,6 +17,8 @@
     align-items: center;
     font-weight: bold;
     &__text{
+        width: 90%;
+        text-align: center;
         color: $color-a;
         background: #fff;
         padding: 10px 20px;
@@ -26,28 +30,45 @@
     height: 90%;
     margin: 20px;
     flex: 1;
-
+    width: 90%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
     background: #fff;
     padding: 10px;
     &__options{
+        position: relative;
         color: $color-a;
-        width: 40px;
-        height: 40px;
+        height: 60px;
+        margin: 10px 0px;
+        padding: 0 15px;
         display: flex;
-        justify-content: center;
         align-items: center;
         border-radius: 5px;
         cursor: pointer;
+        transition: all ease-in-out 300ms;
         &:hover{
             color: #fff;
             background: $color-a;
         }
     }
 }
-.sidebar-nav__options > * {
+.sidebar-nav__options.icon {
     width: 20px;
     height: 20px;
+}
+.sidebar-nav__options p {
+    padding: 0 10px;
+}
+.sidebar-nav__options.active{
+    background: $color-a;
+    color: #fff;
+    padding-left: 60px;
+}
+.sidebar-nav__options.active::after{
+    content: "";
+    position: absolute;
+    background: $color-a;
+    height: 100%; 
+    width: 20px;
+    right : -10px;
 }

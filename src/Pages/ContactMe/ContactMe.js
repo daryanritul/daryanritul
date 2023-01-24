@@ -1,10 +1,18 @@
 import React from 'react';
+import { Element } from 'react-scroll';
+import './ContactMe.scss';
 
 const ContactMe = () => {
   return (
-    <div>
+    <Element
+      className="contactme"
+      name="contact"
+      smooth={true}
+      offset={50}
+      duration={500}
+    >
       <p>Conact Me</p>
-    </div>
+    </Element>
   );
 };
 

@@ -3,6 +3,7 @@
     display: flex;
     height: 100vh;
     width: 100vw;
+    max-width:100%;
     &-text{
         width: 60%;
         display: flex;
@@ -173,7 +174,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	animation: ani 7s;
+	animation: ani 9s;
 	animation-iteration-count: infinite;
 	position: relative;
 }
@@ -198,7 +199,7 @@
 	left: auto;
 	right: auto;
 	background: #fff;
-	animation: opac 7s;
+	animation: opac 9s;
 	animation-iteration-count: infinite;
 }
 .stand::after {
@@ -218,10 +219,10 @@
 	border-radius: 5px;
 }
 @keyframes ani {
-	25% {
-		transform: scaleX(1);
+	0% {
+		transform: scaleX(1) scaleY(1);
 	}
-	50% {
+	25% {
 		transform: scaleX(0.4) scaleY(1.4);
 	}
 	75% {
@@ -233,16 +234,231 @@
 }
 
 @keyframes opac {
-	25% {
+	0% {
 		opacity: 1;
 	}
-	35% {
+	15% {
+		opacity: 0;
+	}
+	75% {
 		opacity: 0;
 	}
 	90% {
+		opacity: 1;
+	}
+}
+
+
+
+
+.circleBox {
+	position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	&-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		position: absolute;
+		width: 100px;
+		height: 100px;
+	}
+}
+.circleBox-circle.one {
+	animation: circle-one 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.two {
+	animation: circle-two 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.three {
+	animation: circle-three 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.four {
+	animation: circle-four 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.five {
+	animation: circle-five 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.six {
+	animation: circle-six 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.seven {
+	animation: circle-seven 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.eight {
+	animation: circle-eight 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.nine {
+	animation: circle-nine 9s;
+	animation-iteration-count: infinite;
+}
+.circleBox-circle.ten {
+	animation: circle-ten 9s;
+	animation-iteration-count: infinite;
+}
+@keyframes circle-one {
+	10% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	25% {
+		transform: translate(200px, 200px);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-two {
+	10% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	25% {
+		transform: translate(-200px, 200px);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-three {
+	10% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	25% {
+		transform: translate(0px, 200px);
+		opacity: 1;
+	}
+	50% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-four {
+	60% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(200px, -200px);
+		opacity: 1;
+	}
+	90% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-five {
+	60% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(0px, -200px);
+		opacity: 1;
+	}
+	90% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-six {
+	60% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+				transform: translate(-200px, -200px);
+		
+		opacity: 1;
+	}
+	90% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+}
+@keyframes circle-seven {
+	0% {
+		transform: translate(-200px, -200px);		
+		opacity: 1;
+	}
+	15% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(0px, 0px);
 		opacity: 0;
 	}
 	100% {
+		transform: translate(-200px, -200px);		
+		opacity: 1;
+	}
+}
+@keyframes circle-eight {
+	0% {
+		transform: translate(200px, 200px);		
+		opacity: 1;
+	}
+	15% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(200px, 200px);		
+		opacity: 1;
+	}
+}
+@keyframes circle-nine {
+	0% {
+		transform: translate(200px, -200px);		
+		opacity: 1;
+	}
+	15% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(200px, -200px);		
+		opacity: 1;
+	}
+}
+@keyframes circle-ten {
+	0% {
+		transform: translate(-200px, 200px);		
+		opacity: 1;
+	}
+	15% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	75% {
+		transform: translate(0px, 0px);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-200px, 200px);		
 		opacity: 1;
 	}
 }
