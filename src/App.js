@@ -1,10 +1,21 @@
 import React from 'react';
+import Footer from './Components/Footer/Footer';
+import Header from './Components/Header/Header';
+import Home from './Screens/Home/Home';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import About from './Screens/About/About';
 
 const App = () => {
+  const { scrollYProgress, scrollY } = useScroll();
+  let y = useTransform(scrollY, [0, 1], ['0%', '50%']);
+
   return (
-    <div>
-      <h2>Hellow World</h2>
-    </div>
+    <>
+      {/* <Header /> */}
+      <motion.div className="app">
+        <Home />
+      </motion.div>
+    </>
   );
 };
 

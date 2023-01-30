@@ -1,6 +1,8 @@
 @import './_variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:wght@500;700&display=swap');
+
 
 *, *::after, *::before{
     box-sizing: border-box;
@@ -14,5 +16,137 @@ html{
 }
 
 h1, h2,h3,h4 {
-    color: $dark-2;
+    color: $dark-1;
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #d0e7fe #0d2237;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #0d2237;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #d0e7fe;
+    border-radius: 0px;
+    border: 0px solid #ffffff;
+  }
+
+button{
+    border: none;
+    font-family: 'Rubik', sans-serif;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+    background: $light-2;
+    padding: 10px 20px;
+    background-color: $light-1;
+    position: relative;
+}
+.primary{
+    width: 200px;
+    height: 50px;
+    position: relative;
+    border : 2px solid $color-a;
+    color : $color-a;
+    position: relative;
+    background: transparent;
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        transform: scale(0,1);
+        transition: all ease-in-out 250ms;
+        background: $color-a;
+        transform-origin: left;
+        z-index: -1;
+    }
+    
+}
+.primary:hover::before{
+    transform: scale(1);
+}
+.primary:hover{
+    color: $light-1;
+}
+.accent{
+    background-color: $color-b;
+    color : $light-1;
+}
+.accent-line{
+    border: 2px solid $color-b;
+    color: $color-b;
+    background-color: #fff;
+}
+
+// PATTERNS & OBJECTS
+
+.rectangle{
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: 20%;
+    top: 30%;
+    background: $color-b;
+    &::before{
+        content: "";
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        border: 3px solid $color-a;
+        right: -30px;
+        bottom: -30px;
+        z-index: -10;
+    }
+    &::after{
+        content: "";
+        width: 270px;
+        height: 270px;
+        position: absolute;
+        left: 30px;
+        top: 30px;
+        border: 3px solid $light-1;
+        border-bottom: $color-b;
+        border-right: $color-b;
+    }
+}
+
+.watermark{
+    position: absolute;
+    font-size: 300px;
+    font-weight: bold;
+    text-align: right;
+    z-index: -99;
+    color: $color-d;
+    opacity: .1;
+    padding: 10px;
+}
+
+
+
+
+// APP CSS
+
+
+.app{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.glass{
+    background-color: transparentize($color: $light-1, $amount: 0.3);
+    backdrop-filter: blur(5px);
 }

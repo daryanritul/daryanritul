@@ -1,0 +1,33 @@
+@import './../../scss/variables.scss';
+
+
+.header {
+    display: flex;
+    background: #fff;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 100px;
+    height: 70px;
+    align-items: center;
+    position :fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 999;
+    &-logo{
+        color: $color-a;
+        font-weight: bold;
+        font-size: 24px;
+        span{
+            color: $color-b;
+        }
+    }
+    &-menu{
+        display: flex;
+
+     &__item{
+        padding: 10px;
+        color: $color-a;
+        cursor: pointer;
+     }
+    }
+}
