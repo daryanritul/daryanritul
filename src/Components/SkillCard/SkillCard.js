@@ -11,13 +11,13 @@ const SkillCard = ({ percentage, skill }) => {
       <div className="skill-bar">
         <motion.div
           className="bar"
-          animate={{
+          whileInView={{
             width: ['0%', `${percentage}%`],
             // scaleX: [0, 1],
             originX: 0,
           }}
           transition={{
-            duration: 3,
+            duration: 2,
           }}
         ></motion.div>
       </div>

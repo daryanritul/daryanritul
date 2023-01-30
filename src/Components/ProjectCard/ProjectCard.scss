@@ -1,0 +1,50 @@
+@import './../../scss/variables.scss';
+
+.proCard{
+    width: 400px;
+    color: $color-d;
+    background: lighten($dark-1, $amount: 3);
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    display: flex;
+    flex-direction: column;
+    margin : 10px;
+    &-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+    h2{
+        color: $color-d;
+        padding: 10px 20px;
+    }
+    p{
+        line-height: 2;
+        padding: 5px 20px;
+        color: transparentize($color-d, $amount: 0.3);
+        flex: 1;
+    }
+}
+
+.pro-icon{
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    margin: 10px;
+}
+
+.shortIcon{
+    width: 30px;
+    height: 30px;
+    margin : 10px;
+}
+.foot{
+    font-size: 16px;
+    color: transparentize($color-d, $amount: 0.5);
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    code {
+        font-weight: bold;
+        padding: 5px;
+    }
+}

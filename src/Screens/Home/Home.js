@@ -6,6 +6,7 @@ import About from '../About/About';
 import TextShpere from '../../Components/TextSphere/TextShpere';
 
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Projects from '../Projects/Projects';
 
 const Home = () => {
   const { scrollYProgress, scrollY } = useScroll();
@@ -59,6 +60,9 @@ const Home = () => {
       </div>
       <div className="about">
         <About />
+      </div>
+      <div className="">
+        <Projects />
       </div>
     </div>
   );
