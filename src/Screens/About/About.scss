@@ -18,12 +18,7 @@
         padding: 0 50px;
     }
     &-journey{
-        padding-top: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        width: 100%;
+      
     }
 }
 
@@ -67,38 +62,3 @@
 }
 
 
-.journey{
-    display: flex;
-    flex-direction: column;
-    padding-top: 40px;
-    width: 80%;
-    &-box{
-        width: 50%;
-        display: flex;
-        flex-direction: column;
-    }
-    &-head{
-        width: 100%;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 22px;
-        font-weight: bold;
-        text-transform: uppercase;
-        margin : 2px;
-        margin-top: 20px;
-
-    }
-    &-body{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 10px;
-    }
-    &-icon{
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-    }
-}

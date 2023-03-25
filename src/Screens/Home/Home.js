@@ -11,8 +11,24 @@ import Projects from '../Projects/Projects';
 const Home = () => {
   const { scrollYProgress, scrollY } = useScroll();
   let y = useTransform(scrollY, [0, 300], [0, 700]);
+  const yRange = useTransform(
+    scrollY,
+    [0, window.innerHeight / 2],
+    [-200, 200]
+  );
   return (
-    <div className="home">
+    <motion.div
+      className="home"
+      style={
+        {
+          // y: yRange,
+          // position: 'fixed',
+          // top: '50%',
+          // left: '50%',
+          // transform: 'translate(-50%, -50%)',
+        }
+      }
+    >
       <div className="home-body">
         <motion.h1
           className="watermark"
@@ -58,13 +74,7 @@ const Home = () => {
           <TextShpere />
         </motion.div>
       </div>
-      <div className="about">
-        <About />
-      </div>
-      <div className="">
-        <Projects />
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

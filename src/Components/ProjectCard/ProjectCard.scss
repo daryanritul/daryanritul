@@ -1,7 +1,7 @@
 @import './../../scss/variables.scss';
 
 .proCard{
-    width: 400px;
+    width: 30%;
     color: $color-d;
     background: lighten($dark-1, $amount: 3);
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
@@ -13,10 +13,12 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px;
-    }
-    h2{
-        color: $color-d;
-        padding: 10px 20px;
+        h2{
+            color: $color-d;
+            padding: 10px 20px;
+            text-align: left;
+            flex: 1;
+        }
     }
     p{
         line-height: 2;

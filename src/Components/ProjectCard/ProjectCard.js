@@ -15,13 +15,13 @@ const ProjectCard = () => {
     >
       <div className="proCard-section">
         <AiFillFolder className="pro-icon" />
+        <h2>Portfolio</h2>
         <span>
           <RiGithubLine className="shortIcon" />
           <GoLinkExternal className="shortIcon" />
         </span>
       </div>
 
-      <h2>Portfolio</h2>
       <p>Build this portfolio website using animations and clearfull Design.</p>
       <div className="proCard-section foot">
         <code>React js</code>
